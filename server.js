@@ -31,3 +31,14 @@ function start() {
                 "View the total utilized budget of a department",
                 "Exit",
             ],
+        })
+        .then((answer) => {
+            switch (answer.action) {
+                case "View all departments":
+                    viewAllDepartments();
+                    break;
+                case "View all roles":
+                    viewAllRoles();
+                    break;
+                case "View all employees":
+                    viewAllEmployees();
