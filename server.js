@@ -2,7 +2,7 @@ const inquirer = require("inquirer");
 const mysql = require("mysql2");
 const cfonts = require('cfonts');
 
-// create a MySQL connection
+// Create a MySQL connection
 const connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
@@ -10,7 +10,10 @@ const connection = mysql.createConnection({
     password: "",
     database: "employeeTracker_db",
 });
+
+// Function to start the application
 function start() {
+    // Prompt the user with a list of actions to choose from
     inquirer
         .prompt({
             type: "list",
@@ -33,6 +36,7 @@ function start() {
             ],
         })
         .then((answer) => {
+            // Execute the corresponding function based on the user's choice
             switch (answer.action) {
                 case "View all departments":
                     viewAllDepartments();
@@ -42,3 +46,40 @@ function start() {
                     break;
                 case "View all employees":
                     viewAllEmployees();
+                    break;
+                    break;
+                    case "Add a department":
+                        addDepartment();
+                        break;
+                    case "Add a role":
+                        addRole();
+                        break;
+                    case "Add an employee":
+                        addEmployee();
+                        break;
+                    case "Add a Manager":
+                        addManager();
+                        break;
+                    case "Update an employee role":
+                        updateEmployeeRole();
+                        break;
+                    case "View Employees by Manager":
+                        viewEmployeesByManager();
+                        break;
+                    case "View Employees by Department":
+                        viewEmployeesByDepartment();
+                        break;
+                    case "Delete Departments | Roles | Employees":
+                        deleteDepartmentsRolesEmployees();
+                        break;
+                    case "View the total utilized budget of a department":
+                        viewTotalUtilizedBudgetOfDepartment();
+                        break;
+                    case "Exit":
+                        connection.end();
+                        console.log("Goodbye!");
+                        break;
+                }
+            });
+    }
+                // ... (similar comments for other cases)
