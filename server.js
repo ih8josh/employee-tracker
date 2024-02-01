@@ -1,3 +1,5 @@
+const inquirer = require('inquirer');
+// rest of your code
 // Import necessary libraries
 const inquirer = require("inquirer");
 const mysql = require("mysql2");

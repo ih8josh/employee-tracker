@@ -4,8 +4,8 @@
       "start": "node server.js"
     },
     "dependencies": {
-      "inquirer": "^8.3.0"
-      // other dependencies
+      "inquirer": "^8.3.0",
+      "mysql2": "^2.3.0",
+      "cfonts": "^2.9.0"
     }
   }
-  
