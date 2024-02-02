@@ -1,5 +1,4 @@
-const inquirer = require('inquirer');
-// rest of your code
+
 // Import necessary libraries
 const inquirer = require("inquirer");
 const mysql = require("mysql2");
@@ -10,7 +9,7 @@ const connection = mysql.createConnection({
   host: "localhost",
   port: 3306,
   user: "root",
-  password: "",
+  password: "Mjvskb23!",
   database: "employeeTracker_db",
 });
 

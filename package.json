@@ -1,11 +1,19 @@
 {
-    "type": "module",
-    "scripts": {
-      "start": "node server.js"
-    },
-    "dependencies": {
-      "inquirer": "^8.3.0",
-      "mysql2": "^2.3.0",
-      "cfonts": "^2.9.0"
-    }
-  }
+  
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cfonts": "^2.9.0",
+    "inquirer": "^8.2.4",
+    "mysql2": "^2.3.0"
+  },
+  "name": "employee-tracker",
+  "description": "## Description",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "author": "josh gonzalez",
+  "license": "MIT"
+}
+
