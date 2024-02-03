@@ -2,7 +2,7 @@
     "sqltools.connections": [
         {
             "mysqlOptions": {
-                "authProtocol": "default",
+                "authProtocol": "xprotocol",
                 "enableSsl": "Disabled"
             },
             "previewLimit": 50,
@@ -10,9 +10,10 @@
             "port": 3306,
             "driver": "MySQL",
             "name": "schema.sql",
-            "database": "myshop",
-            "username": "admin",
-            "password": "Mjvskb23!"
+            "database": "\"test_db\"",
+            "username": "root",
+            "password": "Mjvskb23!",
+            "group": "MySQL"
         }
     ]
 }
